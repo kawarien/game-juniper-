@@ -1,24 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch,
+  Redirect
+} from "react-router-dom";
+import Nav from './components/Nav';
+import Home from './components/Home';
+import Regles from './components/regles';
+import Jeu from './components/jeu';
+import Score from './components/score';
+
+const numberTable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router >
+        <Nav />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/regles" component={Regles} />
+          <Route path="/jeu" component={Jeu} />
+          <Route path="/score" component={Score} />
+          <Route component={({ location }) => (<p>404 Page Not Found </p>)} />
+        </Switch>
+    </Router>
   );
 }
 
