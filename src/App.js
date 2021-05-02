@@ -14,7 +14,6 @@ import Regles from './components/regles';
 import Jeu from './components/jeu';
 import Score from './components/score';
 
-const numberTable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function App() {
   return (
