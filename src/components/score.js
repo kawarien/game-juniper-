@@ -29,8 +29,16 @@ class Score extends Component {
             </thead>
             <tbody>
                 <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
+                <td>44</td>
+                <td>23</td>
+                </tr>
+                <tr>
+                <td>44</td>
+                <td>23</td>
+                </tr>
+                <tr>
+                <td>44</td>
+                <td>23</td>
                 </tr>
             </tbody>
             </table>
